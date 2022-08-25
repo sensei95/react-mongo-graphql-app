@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { ProjectSchema } = require("./Project");
 
 const ClientSchema = new mongoose.Schema({
   name: {
@@ -9,6 +10,9 @@ const ClientSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
+  },
+  projects: {
+    type: [ProjectSchema],
   },
 });
 
